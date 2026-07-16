@@ -1,0 +1,91 @@
+{
+  "projectInfo": {
+    "name": "vespa-app",
+    "description": "Vespa Virtual Storefront & CRM"
+  },
+  "collections": [
+    {
+      "name": "leads",
+      "description": "Stores user intent, test ride bookings, and basic lead data.",
+      "securityRequirements": {
+        "read": "authenticated_users",
+        "create": "public",
+        "update": "owner_only",
+        "delete": "admin_only"
+      },
+      "structure": {
+        "id": "string",
+        "name": "string",
+        "email": "string",
+        "phone": "string",
+        "modelId": "string",
+        "date": "string",
+        "time": "string",
+        "status": "string",
+        "intentScore": "number",
+        "userId": "string"
+      }
+    },
+    {
+      "name": "serviceTickets",
+      "description": "Stores CRM garage and service tickets",
+      "securityRequirements": {
+        "read": "owner_or_admin",
+        "create": "public",
+        "update": "admin_only",
+        "delete": "admin_only"
+      },
+      "structure": {
+        "id": "string",
+        "customerName": "string",
+        "vehicleModel": "string",
+        "serviceType": "string",
+        "date": "string",
+        "status": "string",
+        "userId": "string"
+      }
+    },
+    {
+      "name": "invoices",
+      "description": "Stores financial invoices",
+      "securityRequirements": {
+        "read": "owner_or_admin",
+        "create": "admin_only",
+        "update": "admin_only",
+        "delete": "admin_only"
+      },
+      "structure": {
+        "id": "string",
+        "customerName": "string",
+        "description": "string",
+        "amount": "number",
+        "gst": "number",
+        "total": "number",
+        "date": "string",
+        "status": "string",
+        "userId": "string"
+      }
+    },
+    {
+      "name": "diagnostics",
+      "description": "Telematic data and safety alerts",
+      "securityRequirements": {
+        "read": "admin_only",
+        "create": "admin_only",
+        "update": "admin_only",
+        "delete": "admin_only"
+      },
+      "structure": {
+        "id": "string",
+        "vehicleVin": "string",
+        "customerName": "string",
+        "alertType": "string",
+        "severity": "string",
+        "timestamp": "string"
+      }
+    }
+  ],
+  "authentication": {
+    "providers": ["email", "google"]
+  }
+}

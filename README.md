@@ -1,2 +1,20 @@
-# VESPA-SHOWROOM-WEBSITE
-The **Vespa Showroom Website** is a modern web application that digitalizes dealership operations by enabling customers to explore scooter models, compare features, book test rides, and submit enquiries online. It provides an efficient, secure, and user-friendly platform while simplifying inventory and customer management for administrators.
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
+
+# Run and deploy your AI Studio app
+
+This contains everything you need to run your app locally.
+
+View your app in AI Studio: https://ai.studio/apps/dae9b2f9-d52a-458c-b7e6-717d7a3f1d42
+
+## Run Locally
+
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

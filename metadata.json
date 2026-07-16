@@ -1,0 +1,6 @@
+{
+  "name": "Vespa Showroom",
+  "description": "A premium digital experience center and showroom for Vespa scooters, featuring interactive 3D galleries, test ride booking, and inventory management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
